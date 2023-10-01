@@ -1,5 +1,20 @@
 ## Laravel 10 + Inertia.js + Vue 3 -> single page application
 
+> This is a fork of https://github.com/perisicnikola37/laravel-inertia-vue-spa, and pre-includes the [Pinegrow Vite Plugin](https://www.npmjs.com/package/@pinegrow/vite-plugin), [Pinegrow Tailwind CSS Plugin](https://www.npmjs.com/package/@pinegrow/tailwindcss-plugin) and other goodies for Vue Designer.<br><br>It specifically configures the PHP application server (instead of Vite which is used as a middleware) in Pinegrow Vite Plugin, to enable live-designing of Vue components of this laravel/inertia project.
+
+Youtube video tutorial here - https://www.youtube.com/@vuedesigner
+
+```js
+liveDesigner({
+    devServerUrls: {
+        local: "http://127.0.0.1:8000/",
+    },
+    //...
+}),
+```
+
+**Vue Designer** is a desktop visual editor for Mac, Windows and Linux that lets you visually design your Vue applications. Take it for a free trial at [Vue Designer](https://vuedesigner.com)!<br><br>
+
 <div style="display: flex;">
   <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Laravel.svg/985px-Laravel.svg.png" alt="Laravel Logo" style="width: 40px;">
   <img src="https://user-images.githubusercontent.com/79047182/222930653-4c8079bc-30f0-43e1-9c63-b50a9ad68320.png" alt="image" style="width: 40px;">
@@ -18,47 +33,51 @@ The application is designed to provide a smooth and interactive user experience.
 To get started with the installation, follow these steps:
 
 1. Clone the repository
-``git clone https://github.com/perisicnikola37/laravel-inertia-vue-spa.git``
+   `git clone https://github.com/perisicnikola37/laravel-inertia-vue-spa.git`
 
 2. Enter project directory
-``cd laravel-inertia-vue-project``
+   `cd laravel-inertia-vue-project`
 
 3. Install/update composer
-``composer install | composer update``
+   `composer install | composer update`
 
 4. Install npm
-``npm install``
+   `npm install`
 
-3. Set up the environment variables
-``cp .env.example .env``
+5. Set up the environment variables
+   `cp .env.example .env`
 
-4. Generate an application key
-``php artisan key:generate``
+6. Generate an application key
+   `php artisan key:generate`
 
-5. Configure the database
-``php artisan migrate``
+7. Configure the database
+   `php artisan migrate`
 
-6. Start the development server
-``npm run dev``
+8. Start the app server
+   `php artisan serve`
 
-7. Visit the application at [http://localhost:8000](http://localhost:8000)
+9. Parallely (in a separate terminal), start the development server
+   `npm run dev`
+
+10. Visit the application at [http://localhost:8000](http://localhost:8000)
 
 ## Features
 
 This application includes the following features:
 
-- User authentication and authorization
-- CRUD operations for users and roles
-- Real-time updates using Inertia.js and Vue.js
-- Two factor authentication
-- Browser sessions
-- Full text searching
-- Pagination
-- Multi delete users
-- Inertia.ks progress indicator
-- Font Awesome icons
-- Application analytics
-- User default profile avatar
+-   User authentication and authorization
+-   CRUD operations for users and roles
+-   Real-time updates using Inertia.js and Vue.js
+-   Two factor authentication
+-   Browser sessions
+-   Full text searching
+-   Pagination
+-   Multi delete users
+-   Inertia.ks progress indicator
+-   Font Awesome icons
+-   Application analytics
+-   User default profile avatar
+
 ## Contributing
 
 If you would like to contribute to this project, please follow these steps:
