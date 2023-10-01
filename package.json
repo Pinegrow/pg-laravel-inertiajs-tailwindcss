@@ -1,5 +1,11 @@
 {
-    "private": true,
+    "name": "pg-laravel-inertiajs-tailwindcss",
+    "version": "0.0.0",
+    "homepage": "https://vuedesigner.com",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/pinegrow/pg-laravel-inertiajs-tailwindcss"
+    },
     "scripts": {
         "dev": "npm-run-all --parallel serve vite",
         "vite": "vite",
