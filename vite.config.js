@@ -15,6 +15,14 @@ export default defineConfig({
                 pages: "resources/js/Pages",
                 components: "resources/js/Components",
             },
+            tailwindcss: {
+                /* Please ensure that you update the filenames and paths to accurately match those used in your project. */
+                configPath: "tailwind.config.js",
+                cssPath: "resources/css/app.css",
+                // themePath: false, // Set to false so that Design Panel is not used
+                // restartOnConfigUpdate: true,
+                // restartOnThemeUpdate: true,
+            },
             //...
         }),
         laravel({
