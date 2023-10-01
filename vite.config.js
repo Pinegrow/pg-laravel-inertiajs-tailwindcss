@@ -9,6 +9,12 @@ export default defineConfig({
             devServerUrls: {
                 local: "http://127.0.0.1:8000/",
             },
+            dirs: {
+                src: "resources/js/",
+                layouts: "resources/js/Layouts",
+                pages: "resources/js/Pages",
+                components: "resources/js/Components",
+            },
             //...
         }),
         laravel({
