@@ -1,0 +1,26 @@
+{
+  "extends": "@vue/tsconfig/tsconfig.dom.json",
+  "include": [
+    "env.d.ts",
+    "resources/js/**/*",
+    "resources/js/**/*.vue",
+    "resources/js/*",
+    "components.d.ts",
+    "auto-imports.d.ts",
+    "shims.d.ts",
+    "themes/**/*"
+  ],
+  "exclude": ["**/node_modules/**", "**/dist/**"],
+  "compilerOptions": {
+    "composite": true,
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./resources/js/*"],
+      "~/*": ["resources/js/*"],
+      "~~/*": ["*"]
+    },
+    "moduleResolution": "node",
+    "allowJs": true,
+    "strict": false
+  }
+}

@@ -1,20 +1,21 @@
 <template>
-    <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-        <inertia-link class="hover:text-blue-500 duration-200" :href="`/${href}`">{{ title }}</inertia-link>
-        /
-        <inertia-link :href="`/${href}/${property.id}`" class="text-blue-500">
-            {{ property.name }}
-        </inertia-link>
-    </h2>
+  <h2 class="font-semibold text-xl text-gray-800 leading-tight">
+    <ILink class="hover:text-blue-500 duration-200" :href="`/${href}`">{{
+      title
+    }}</ILink>
+    /
+    <ILink :href="`/${href}/${property.id}`" class="text-blue-500">
+      {{ property.name }}
+    </ILink>
+  </h2>
 </template>
 
 <script>
-
-export default {
+  export default {
     props: {
-        property: Object,
-        title: String,
-        href: String
-    }
-}
+      property: Object,
+      title: String,
+      href: String,
+    },
+  }
 </script>

@@ -1,35 +1,57 @@
 {
-    "name": "pg-laravel-inertiajs-tailwindcss",
-    "version": "0.0.0",
-    "homepage": "https://vuedesigner.com",
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/pinegrow/pg-laravel-inertiajs-tailwindcss"
-    },
-    "scripts": {
-        "dev": "npm-run-all --parallel serve vite",
-        "vite": "vite",
-        "serve": "php artisan serve",
-        "build": "vite build"
-    },
-    "devDependencies": {
-        "@inertiajs/vue3": "^1.0.0",
-        "@pinegrow/tailwindcss-plugin": "^3.0.17",
-        "@pinegrow/vite-plugin": "^3.0.21",
-        "@tailwindcss/forms": "^0.5.2",
-        "@tailwindcss/typography": "^0.5.2",
-        "@vitejs/plugin-vue": "^4.0.0",
-        "autoprefixer": "^10.4.7",
-        "axios": "^1.1.2",
-        "laravel-vite-plugin": "^0.7.2",
-        "npm-run-all": "^4.1.5",
-        "postcss": "^8.4.14",
-        "tailwindcss": "^3.1.0",
-        "vite": "^4.0.0",
-        "vue": "^3.2.31"
-    },
-    "dependencies": {
-        "@fortawesome/fontawesome-free": "^6.4.0",
-        "nprogress": "^0.2.0"
-    }
+  "name": "pg-laravel-inertiajs-tailwindcss",
+  "version": "0.0.0",
+  "homepage": "https://vuedesigner.com",
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pinegrow/pg-laravel-inertiajs-tailwindcss"
+  },
+  "scripts": {
+    "dev": "npm-run-all --parallel serve vite",
+    "vite": "vite",
+    "serve": "php artisan serve",
+    "now": "npm run build && npm run preview",
+    "build": "vite build",
+    "preview": "vite preview",
+    "vue-devtools": "vue-devtools",
+    "lint": "npm run lint:fix && npm run format",
+    "lint:fix": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore",
+    "format": "prettier --write . '!public'"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^6.4.0",
+    "nprogress": "^0.2.0"
+  },
+  "devDependencies": {
+    "@iconify/json": "^2.2.64",
+    "@inertiajs/vue3": "^1.0.0",
+    "@nuxt/eslint-config": "^0.1.1",
+    "@pinegrow/tailwindcss-plugin": "^3.0.17",
+    "@pinegrow/vite-plugin": "^3.0.21",
+    "@tailwindcss/forms": "^0.5.2",
+    "@tailwindcss/typography": "^0.5.2",
+    "@types/node": "^20.5.0",
+    "@unocss/preset-icons": "^0.51.4",
+    "@vitejs/plugin-vue": "^4.0.0",
+    "@vue/devtools": "^6.5.0",
+    "autoprefixer": "^10.4.7",
+    "axios": "^1.1.2",
+    "eslint": "^8.36.0",
+    "eslint-config-prettier": "^8.7.0",
+    "laravel-vite-plugin": "^0.7.2",
+    "npm-run-all": "^4.1.5",
+    "postcss": "^8.4.14",
+    "prettier": "^2.8.4",
+    "tailwindcss": "^3.1.0",
+    "typescript": "^5.0",
+    "unocss": "^0.51.12",
+    "unplugin-auto-import": "^0.15.3",
+    "unplugin-vue-components": "^0.24.1",
+    "vite": "^4.0.0",
+    "vite-plugin-vue-devtools": "^0.0.22",
+    "vue": "^3.2.31",
+    "vue-tsc": "^1.6.4"
+  },
+  "web-types": "web-types.json"
 }

@@ -65,18 +65,18 @@ To get started with the installation, follow these steps:
 
 This application includes the following features:
 
--   User authentication and authorization
--   CRUD operations for users and roles
--   Real-time updates using Inertia.js and Vue.js
--   Two factor authentication
--   Browser sessions
--   Full text searching
--   Pagination
--   Multi delete users
--   Inertia.ks progress indicator
--   Font Awesome icons
--   Application analytics
--   User default profile avatar
+- User authentication and authorization
+- CRUD operations for users and roles
+- Real-time updates using Inertia.js and Vue.js
+- Two factor authentication
+- Browser sessions
+- Full text searching
+- Pagination
+- Multi delete users
+- Inertia.ks progress indicator
+- Font Awesome icons
+- Application analytics
+- User default profile avatar
 
 ## Contributing
 
