@@ -80,7 +80,7 @@ export default defineConfig({
     AutoImportComponents({
       /* Please ensure that you update the filenames and paths to accurately match those used in your project. */
 
-      dirs: ['src/components'],
+      dirs: ['resources/js/components'],
 
       // allow auto load markdown components under ./src/components/
       extensions: ['vue', 'md'],
