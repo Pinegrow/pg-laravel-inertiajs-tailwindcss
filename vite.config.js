@@ -69,9 +69,9 @@ export default defineConfig({
       ],
       dirs: [
         /* Please ensure that you update the filenames and paths to accurately match those used in your project. */
-        'src/composables',
-        'src/utils',
-        'src/stores',
+        // 'src/composables',
+        // 'src/utils',
+        // 'src/stores',
       ],
       vueTemplate: true,
       dts: 'auto-imports.d.ts',

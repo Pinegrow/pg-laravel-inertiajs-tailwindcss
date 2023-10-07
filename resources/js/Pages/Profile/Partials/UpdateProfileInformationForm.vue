@@ -74,15 +74,12 @@
     }
   }
 </script>
-
 <template>
   <FormSection @submitted="updateProfileInformation">
     <template #title> Profile Information </template>
-
     <template #description>
       Update your account's profile information and email address.
     </template>
-
     <template #form>
       <!-- Profile Photo -->
       <div
@@ -96,9 +93,7 @@
           class="hidden"
           @change="updatePhotoPreview"
         />
-
         <InputLabel for="photo" value="Photo" />
-
         <!-- Current Profile Photo -->
         <div v-show="!photoPreview" class="mt-2">
           <img
@@ -107,7 +102,6 @@
             class="object-cover w-20 h-20 rounded-full"
           />
         </div>
-
         <!-- New Profile Photo Preview -->
         <div v-show="photoPreview" class="mt-2">
           <span
@@ -115,7 +109,6 @@
             :style="'background-image: url(\'' + photoPreview + '\');'"
           />
         </div>
-
         <SecondaryButton
           class="mt-2 mr-2"
           type="button"
@@ -123,7 +116,6 @@
         >
           Select A New Photo
         </SecondaryButton>
-
         <SecondaryButton
           v-if="user.profile_photo_path"
           type="button"
@@ -132,10 +124,8 @@
         >
           Remove Photo
         </SecondaryButton>
-
         <InputError :message="form.errors.photo" class="mt-2" />
       </div>
-
       <!-- Name -->
       <div class="col-span-6 sm:col-span-4">
         <InputLabel for="name" value="Name" />
@@ -148,7 +138,6 @@
         />
         <InputError :message="form.errors.name" class="mt-2" />
       </div>
-
       <!-- Email -->
       <div class="col-span-6 sm:col-span-4">
         <InputLabel for="email" value="Email" />
@@ -160,7 +149,6 @@
           autocomplete="username"
         />
         <InputError :message="form.errors.email" class="mt-2" />
-
         <div
           v-if="
             $page.props.jetstream.hasEmailVerification &&
@@ -169,7 +157,6 @@
         >
           <p class="mt-2 text-sm">
             Your email address is unverified.
-
             <ILink
               :href="route('verification.send')"
               method="post"
@@ -180,7 +167,6 @@
               Click here to re-send the verification email.
             </ILink>
           </p>
-
           <div
             v-show="verificationLinkSent"
             class="mt-2 text-sm font-medium text-green-600"
@@ -190,12 +176,10 @@
         </div>
       </div>
     </template>
-
     <template #actions>
       <ActionMessage :on="form.recentlySuccessful" class="mr-3">
         Saved.
       </ActionMessage>
-
       <PrimaryButton
         :class="{ 'opacity-25': form.processing }"
         :disabled="form.processing"
