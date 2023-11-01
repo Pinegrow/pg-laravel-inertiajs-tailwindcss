@@ -15,28 +15,6 @@ import presetIcons from '@unocss/preset-icons'
 
 export default defineConfig({
   plugins: [
-    liveDesigner({
-      devServerUrls: {
-        local: 'http://127.0.0.1:8000/',
-      },
-      iconPreferredCase: 'unocss', // default value (can be removed), unocss by default uses the unocss format for icon names
-      devtoolsKey: 'devtools',
-      dirs: {
-        src: 'resources/js/',
-        layouts: 'resources/js/Layouts',
-        pages: 'resources/js/Pages',
-        components: 'resources/js/Components',
-      },
-      tailwindcss: {
-        /* Please ensure that you update the filenames and paths to accurately match those used in your project. */
-        configPath: 'tailwind.config.js',
-        cssPath: 'resources/css/app.css',
-        // themePath: false, // Set to false so that Design Panel is not used
-        // restartOnConfigUpdate: true,
-        // restartOnThemeUpdate: true,
-      },
-      //...
-    }),
     Laravel({
       input: 'resources/js/app.js',
       refresh: true,
@@ -97,6 +75,28 @@ export default defineConfig({
           prefix: 'i-', // default prefix, do not change
         }),
       ],
+    }),
+    liveDesigner({
+      devServerUrls: {
+        local: 'http://127.0.0.1:8000/',
+      },
+      iconPreferredCase: 'unocss', // default value (can be removed), unocss by default uses the unocss format for icon names
+      devtoolsKey: 'devtools',
+      dirs: {
+        src: 'resources/js/',
+        layouts: 'resources/js/Layouts',
+        pages: 'resources/js/Pages',
+        components: 'resources/js/Components',
+      },
+      tailwindcss: {
+        /* Please ensure that you update the filenames and paths to accurately match those used in your project. */
+        configPath: 'tailwind.config.js',
+        cssPath: 'resources/css/app.css',
+        // themePath: false, // Set to false so that Design Panel is not used
+        // restartOnConfigUpdate: true,
+        // restartOnThemeUpdate: true,
+      },
+      //...
     }),
   ],
   resolve: {
