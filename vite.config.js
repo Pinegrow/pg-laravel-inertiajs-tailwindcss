@@ -75,12 +75,8 @@ export default defineConfig({
           prefix: 'i-', // default prefix, do not change
         }),
       ],
-      content: {
-        pipeline: {
-          include: ['./src/**/*'],
-        },
-      },
     }),
+    // VueDevTools(),
     liveDesigner({
       devServerUrls: {
         local: 'http://127.0.0.1:8000/',
