@@ -58,7 +58,7 @@ export default defineConfig({
     AutoImportComponents({
       /* Please ensure that you update the filenames and paths to accurately match those used in your project. */
 
-      dirs: ['resources/js/components'],
+      dirs: ['resources/js/Components'],
 
       // allow auto load markdown components under ./src/components/
       extensions: ['vue', 'md'],
@@ -78,8 +78,9 @@ export default defineConfig({
     }),
     // VueDevTools(),
     liveDesigner({
+      startupPage: '@/Pages/Welcome.vue',
       devServerUrls: {
-        local: 'http://127.0.0.1:8000/',
+        local: 'http://127.0.0.1:8080/',
       },
       iconPreferredCase: 'unocss', // default value (can be removed), unocss by default uses the unocss format for icon names
       devtoolsKey: 'devtools',
@@ -95,7 +96,7 @@ export default defineConfig({
         cssPath: 'resources/css/app.css',
         // themePath: false, // Set to false so that Design Panel is not used
         // restartOnConfigUpdate: true,
-        // restartOnThemeUpdate: true,
+        restartOnThemeUpdate: true,
       },
       //...
     }),
